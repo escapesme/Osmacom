@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         images.add(R.drawable.hea_th);
 
         titles.add("IPE/IPN");
-        intents.add(new Intent(this, TpeofileActivity.class));
+        intents.add(new Intent(this, IPEActivity.class));
         images.add(R.drawable.ipe_th);
 
         titles.add("T-Profile");
