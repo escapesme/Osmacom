@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         intents.add(new Intent(this, TpeofileActivity.class));
         images.add(R.drawable.angles_th);
         titles.add("HEA/HEB/HEM HEC");
-        intents.add(new Intent(this, HEBActivity.class));
+        intents.add(new Intent(this, HEAActivity.class));
         images.add(R.drawable.hea_th);
 
         titles.add("IPE/IPN");
