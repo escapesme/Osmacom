@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Osmacom</string>
+
+    <string name="cm">
+        <![CDATA[
+        cm  <sub>2</sub>
+
+
+        ]]>
+
+
+       </string>
+    <string name="title_activity_tmp">tmpActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+
 </resources>

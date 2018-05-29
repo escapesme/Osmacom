@@ -1,9 +1,12 @@
 package me.e_scapes.ismail.osmacom.libs;
 
 import android.content.Intent;
+import android.support.annotation.Nullable;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
@@ -65,5 +68,31 @@ public class MyActivity extends AppCompatActivity {
         }
         return super.onTouchEvent(event);
     }
+
+
+   protected  void updatecmText(int id ){
+
+        TextView cm = findViewById(id);
+        cm.setText(Html.fromHtml(getString(R.string.cm)));
+
+//R.id.cm_txt
+
+
+
+    }
+    protected  void updateNavigation(@Nullable BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener ,int act  ){
+
+
+        BottomNavigationView navigation = findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        navigation.setSelectedItemId(act);
+
+
+    }
+
+
+
+
 
 }

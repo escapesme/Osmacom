@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/hea"
+        android:title="HEA" />
+
+    <item
+        android:id="@+id/heb"
+        android:title="HEB" />
+
+    <item
+        android:id="@+id/hem"
+        android:title="HEM/HEC" />
+
+</menu>
