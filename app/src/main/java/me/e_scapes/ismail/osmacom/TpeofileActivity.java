@@ -13,6 +13,11 @@ public class TpeofileActivity extends MyActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tpeofile);
+
+        updatecmText(R.id.cm_txt);
+
+
+
         recyclers.clear();
         data.clear();
 

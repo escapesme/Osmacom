@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         titles.add("Angles");
-        intents.add(new Intent(this, TpeofileActivity.class));
+        intents.add(new Intent(this, AngleseActivity.class));
         images.add(R.drawable.angles_th);
         titles.add("HEA/HEB/HEM HEC");
         intents.add(new Intent(this, HEAActivity.class));
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         intents.add(new Intent(this, TpeofileActivity.class));
         images.add(R.drawable.t_th);
         titles.add("UAP/UPN");
-        intents.add(new Intent(this, TpeofileActivity.class));
+        intents.add(new Intent(this, UAPActivity.class));
         images.add(R.drawable.uap_th);
 
         titles.add("Bars");
