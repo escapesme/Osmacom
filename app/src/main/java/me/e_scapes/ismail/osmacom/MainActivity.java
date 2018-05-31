@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         images.add(R.drawable.uap_th);
 
         titles.add("Bars");
-        intents.add(new Intent(this, TpeofileActivity.class));
+        intents.add(new Intent(this, BarsActivity.class));
         images.add(R.drawable.bars_th);
 
         titles.add("Sheets/Flats");

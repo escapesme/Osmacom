@@ -77,7 +77,7 @@ public class MyActivity extends AppCompatActivity {
 
 //R.id.cm_txt
 
-
+       cm.setPadding(0,10,0,0);
 
     }
     protected  void updateNavigation(@Nullable BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener ,int act  ){
