@@ -22,7 +22,7 @@ public class IPEActivity extends MyActivity {
 
         recyclers.clear();
         data.clear();
-
+        name = "IPE";
         recyclers.put("section", (RecyclerView) findViewById(R.id.my_recycler_section));
         recyclers.put("weight", (RecyclerView) findViewById(R.id.my_recycler_weight));
         recyclers.put("height", (RecyclerView) findViewById(R.id.my_recycler_height));

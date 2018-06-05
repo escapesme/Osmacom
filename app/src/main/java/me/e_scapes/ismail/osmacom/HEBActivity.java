@@ -20,6 +20,7 @@ public class HEBActivity extends MyActivity {
         setContentView(R.layout.activity_heb);
         updatecmText(R.id.cm_txt);
         updateNavigation(mOnNavigationItemSelectedListener, R.id.heb);
+        name = "HEB";
 
 
         recyclers.clear();

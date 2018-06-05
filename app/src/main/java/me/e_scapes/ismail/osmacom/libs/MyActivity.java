@@ -22,6 +22,9 @@ public class MyActivity extends AppCompatActivity {
     protected HashMap<String, RecyclerView> recyclers = new HashMap<>();
     protected  HashMap<String, String[]> data = new HashMap<>();
     protected  String name = "";
+    protected  String pricetitle = "";
+
+
 
    protected void update_items() {
         for (String a : recyclers.keySet()) {
@@ -40,6 +43,12 @@ public class MyActivity extends AppCompatActivity {
     public void gotoprice(View view) {
         Intent i = new Intent(this, PriceActivity.class);
         i.putExtra("name", name);
+
+        pricetitle =getPriceTitle();
+        i.putExtra("pricetitle", pricetitle);
+
+
+
         for (String a : recyclers.keySet()) {
             View v = recyclers.get(a).getChildAt(0);
             TextView t = v.findViewById(R.id.txt);
@@ -47,7 +56,31 @@ public class MyActivity extends AppCompatActivity {
         }
         startActivity(i);
     }
+String getPriceTitle(){
+String r="";
 
+
+switch (name){
+
+    default:
+        View wv = recyclers.get("width").getChildAt(0);
+        TextView t = wv.findViewById(R.id.txt);
+
+        View hv = recyclers.get("height").getChildAt(0);
+        TextView ht = hv.findViewById(R.id.txt);
+
+        View wev = recyclers.get("weight").getChildAt(0);
+        TextView wet = wev.findViewById(R.id.txt);
+        r= name
+                + "  " + t.getText().toString()
+                + " x " + ht.getText().toString()
+                + " x " +wet.getText().toString();
+}
+
+return r;
+
+
+}
 
     public void gototable(View view) {
         Intent i = new Intent(this, TableActivity.class);

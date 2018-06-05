@@ -2,11 +2,11 @@ package me.e_scapes.ismail.osmacom;
 
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
+
 import me.e_scapes.ismail.osmacom.libs.MyActivity;
 
 
 public class TpeofileActivity extends MyActivity {
-
 
 
     @Override
@@ -18,9 +18,10 @@ public class TpeofileActivity extends MyActivity {
         updatecmText(R.id.cm_txt);
 
 
-
         recyclers.clear();
         data.clear();
+        name = "T-Profile";
+
 
         recyclers.put("section", (RecyclerView) findViewById(R.id.my_recycler_section));
         recyclers.put("weight", (RecyclerView) findViewById(R.id.my_recycler_weight));
@@ -146,11 +147,6 @@ public class TpeofileActivity extends MyActivity {
         update_items();
 
     }
-
-
-
-
-
 
 
 }

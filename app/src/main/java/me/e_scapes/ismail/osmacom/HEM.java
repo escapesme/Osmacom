@@ -22,6 +22,8 @@ public class HEM extends MyActivity {
 
         recyclers.clear();
         data.clear();
+        name = "HEM";
+
         recyclers.put("heb", (RecyclerView) findViewById(R.id.my_recycler_heb));
 
         recyclers.put("section", (RecyclerView) findViewById(R.id.my_recycler_section));

@@ -19,6 +19,7 @@ public class HEAActivity extends MyActivity {
         updatecmText(R.id.cm_txt);
         updateNavigation(mOnNavigationItemSelectedListener,  R.id.hea);
 
+        name = "HEA";
 
         recyclers.clear();
         data.clear();

@@ -16,6 +16,7 @@ public class UPNActivity extends MyActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upn);
+        name = "UPN";
 
         updatecmText(R.id.cm_txt);
         updateNavigation(mOnNavigationItemSelectedListener, R.id.upn);

@@ -16,6 +16,7 @@ public class UAPActivity extends MyActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_uap);
+        name = "UAP";
 
         updatecmText(R.id.cm_txt);
         updatecmText(R.id.cm_txt2);
