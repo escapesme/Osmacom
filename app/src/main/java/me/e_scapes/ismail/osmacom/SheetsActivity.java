@@ -18,7 +18,7 @@ public class SheetsActivity extends MyActivity {
         setContentView(R.layout.activity_sheets);
 
 
-        updatecmText(R.id.cm_txt);
+     //   updatecmText(R.id.cm_txt);
         updateNavigation(mOnNavigationItemSelectedListener, R.id.sheets);
 
 
