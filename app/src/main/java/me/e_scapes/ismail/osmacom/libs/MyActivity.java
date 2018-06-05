@@ -75,7 +75,6 @@ public class MyActivity extends AppCompatActivity {
         TextView cm = findViewById(id);
         cm.setText(Html.fromHtml(getString(R.string.cm)));
 
-//R.id.cm_txt
 
        cm.setPadding(0,10,0,0);
 
