@@ -31,7 +31,12 @@
         <item name="android:layout_height">30dp</item>
     </style>
 
+    <style name="recycler_parent_s">
+        <item name="android:layout_marginRight">3dp</item>
+        <item name="android:layout_marginTop">1dp</item>
 
+
+    </style>
 
     <style name="background">
         <item name="android:layout_width">match_parent</item>

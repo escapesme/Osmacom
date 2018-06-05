@@ -160,96 +160,97 @@
 
 
             />
-
         <LinearLayout
             style="@style/recycler_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical|center_horizontal|center"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.107"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.695">
+            app:layout_constraintVertical_bias="0.58">
 
-            <TextView
-                style="@style/txt_style"
+            <LinearLayout
+                style="@style/recycler_parent"
+                android:gravity="center_vertical|center_horizontal|center"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/txt_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="2dp"
+                    android:text="weight" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/my_recycler_weight"
+                    style="@style/recycler"
+
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.51"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.88" />
+
+                <TextView
+                    android:id="@+id/textView2"
+
+                    style="@style/txt_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="2dp"
+                    android:text="kg/m" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/recycler_parent_s"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="2dp"
-                android:layout_marginStart="2dp"
-                android:text="section" />
+                android:gravity="center_vertical|center_horizontal|center"
+                android:orientation="horizontal">
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/my_recycler_section"
-                style="@style/recycler"
+                <TextView
+                    style="@style/txt_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="2dp"
+                    android:text="section" />
 
-                android:layout_marginEnd="2dp"
-                android:layout_marginStart="2dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.51"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.88" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/my_recycler_section"
+                    style="@style/recycler"
 
-            <TextView
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.51"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.88" />
 
-                android:id="@+id/cm_txt"
-                style="@style/txt_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="2dp"
-                android:layout_marginStart="2dp"
-                android:text="cm" />
+                <TextView
+
+                    android:id="@+id/cm_txt"
+                    style="@style/txt_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="2dp"
+                    android:text="cm" />
+
+            </LinearLayout>
 
         </LinearLayout>
-
-        <LinearLayout
-            style="@style/recycler_parent"
-            android:gravity="center_vertical|center_horizontal|center"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.125"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.629">
-
-            <TextView
-                style="@style/txt_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="2dp"
-                android:layout_marginStart="2dp"
-                android:text="weight" />
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/my_recycler_weight"
-                style="@style/recycler"
-
-                android:layout_marginEnd="2dp"
-                android:layout_marginStart="2dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.51"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.88" />
-
-            <TextView
-                android:id="@+id/textView2"
-
-                style="@style/txt_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="2dp"
-                android:layout_marginStart="2dp"
-                android:text="kg/m" />
-
-        </LinearLayout>
-
         <android.support.v7.widget.RecyclerView
             android:id="@+id/my_recycler_width"
             style="@style/recycler"

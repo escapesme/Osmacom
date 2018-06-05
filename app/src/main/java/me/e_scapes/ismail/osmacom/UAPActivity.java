@@ -18,6 +18,10 @@ public class UAPActivity extends MyActivity {
         setContentView(R.layout.activity_uap);
 
         updatecmText(R.id.cm_txt);
+        updatecmText(R.id.cm_txt2);
+
+
+
         updateNavigation(mOnNavigationItemSelectedListener, R.id.uap);
 
 

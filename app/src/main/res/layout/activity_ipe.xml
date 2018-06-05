@@ -93,6 +93,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btns_panel"
             app:layout_constraintVertical_bias="0.0">
+            <LinearLayout
+                style="@style/recycler_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal|center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.253"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.523">
 
             <LinearLayout
                 style="@style/recycler_parent"
@@ -100,12 +112,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical|center_horizontal|center"
                 android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.253"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.523">
+                >
 
                 <TextView
                     style="@style/txt_style"
@@ -141,17 +148,12 @@
             </LinearLayout>
 
             <LinearLayout
-                style="@style/recycler_parent"
+                style="@style/recycler_parent_s"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical|center_horizontal|center"
                 android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.229"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.576">
+                >
 
                 <TextView
                     style="@style/txt_style"
@@ -185,7 +187,7 @@
                     android:text="cm" />
 
             </LinearLayout>
-
+            </LinearLayout>
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/my_recycler_thickness_top"
                 style="@style/recycler"
@@ -253,9 +255,9 @@
 
             <LinearLayout
                 style="@style/recycler_parent"
-                android:layout_height="28dp"
+                android:layout_height="wrap_content"
                 android:gravity="center_vertical|center_horizontal|center"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.139"
@@ -263,84 +265,85 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.273">
 
-                <TextView
-                    style="@style/txt_style"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    style="@style/recycler_parent"
+                    android:layout_height="28dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center_vertical|center_horizontal|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/txt_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="2dp"
+                        android:text="IPE" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/my_recycler_ipes"
+                        style="@style/recycler"
+
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="2dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.51"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.88" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+
+                        style="@style/txt_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="2dp"
+                        android:text="standard" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/recycler_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="2dp"
-                    android:layout_marginStart="2dp"
-                    android:text="IPE" />
+                    android:gravity="center_vertical|center_horizontal|center"
+                    android:orientation="horizontal">
 
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/my_recycler_ipes"
-                    style="@style/recycler"
+                    <TextView
+                        style="@style/txt_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="2dp"
+                        android:text="IPE" />
 
-                    android:layout_marginEnd="2dp"
-                    android:layout_marginStart="2dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.51"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.88" />
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/my_recycler_iper"
+                        style="@style/recycler"
 
-                <TextView
-                    android:id="@+id/textView2"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="2dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.51"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.88" />
 
-                    style="@style/txt_style"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="2dp"
-                    android:layout_marginStart="2dp"
-                    android:text="standard" />
+                    <TextView
 
+                        android:id="@+id/cm_txt"
+                        style="@style/txt_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="2dp"
+                        android:text="R reinforces" />
+
+                </LinearLayout>
             </LinearLayout>
-
-            <LinearLayout
-                style="@style/recycler_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical|center_horizontal|center"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.15"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.33">
-
-                <TextView
-                    style="@style/txt_style"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="2dp"
-                    android:layout_marginStart="2dp"
-                    android:text="IPE" />
-
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/my_recycler_iper"
-                    style="@style/recycler"
-
-                    android:layout_marginEnd="2dp"
-                    android:layout_marginStart="2dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.51"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.88" />
-
-                <TextView
-
-                    android:id="@+id/cm_txt"
-                    style="@style/txt_style"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="2dp"
-                    android:layout_marginStart="2dp"
-                    android:text="R reinforces" />
-
-            </LinearLayout>
-
         </android.support.constraint.ConstraintLayout>
 
 
