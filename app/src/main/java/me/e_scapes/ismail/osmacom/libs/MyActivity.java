@@ -30,6 +30,14 @@ public class MyActivity extends AppCompatActivity {
             recyclers.get(a).setHasFixedSize(true);
             recyclers.get(a).setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
             recyclers.get(a).setAdapter(new MyAdapter(data.get(a)));
+            recyclers.get(a).setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    return true;
+                }
+            });
+
+
         }
     }
 
