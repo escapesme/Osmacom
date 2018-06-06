@@ -45,8 +45,8 @@ public class UAPActivity extends MyActivity {
                 "",
                 "",
                 "",
-                "",
-                "\n","130",
+                "", "",
+                "","130",
                 "175",
                 "200",
                 "250",
@@ -63,13 +63,13 @@ public class UAPActivity extends MyActivity {
                 "220",
                 "250",
                 "270",
-                "300","",
+                "300","","",
                 "",
                 "",
                 "",
                 "",
                 "",
-                "\n"});
+                ""});
 
         data.put("thickness_top", new String[]{"8",
                 "8.5",

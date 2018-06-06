@@ -20,13 +20,12 @@ import me.e_scapes.ismail.osmacom.TableActivity;
 
 public class MyActivity extends AppCompatActivity {
     protected HashMap<String, RecyclerView> recyclers = new HashMap<>();
-    protected  HashMap<String, String[]> data = new HashMap<>();
-    protected  String name = "";
-    protected  String pricetitle = "";
+    protected HashMap<String, String[]> data = new HashMap<>();
+    protected String name = "";
+    protected String pricetitle = "";
 
 
-
-   protected void update_items() {
+    protected void update_items() {
         for (String a : recyclers.keySet()) {
             recyclers.get(a).setHasFixedSize(true);
             recyclers.get(a).setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
@@ -44,9 +43,8 @@ public class MyActivity extends AppCompatActivity {
         Intent i = new Intent(this, PriceActivity.class);
         i.putExtra("name", name);
 
-        pricetitle =getPriceTitle();
+        pricetitle = getPriceTitle();
         i.putExtra("pricetitle", pricetitle);
-
 
 
         for (String a : recyclers.keySet()) {
@@ -56,31 +54,87 @@ public class MyActivity extends AppCompatActivity {
         }
         startActivity(i);
     }
-String getPriceTitle(){
-String r="";
 
 
-switch (name){
+    String getValue(String v) {
+        if (recyclers.containsKey(v)) {
+            View wev = recyclers.get(v).getChildAt(0);
+            TextView wet = wev.findViewById(R.id.txt);
+            return wet.getText().toString();
+        }
+        return "";
+    }
 
-    default:
-        View wv = recyclers.get("width").getChildAt(0);
-        TextView t = wv.findViewById(R.id.txt);
+    String getPriceTitle() {
+        String r = name;
+        String width = "", height = "", weight = "";
 
-        View hv = recyclers.get("height").getChildAt(0);
-        TextView ht = hv.findViewById(R.id.txt);
-
-        View wev = recyclers.get("weight").getChildAt(0);
-        TextView wet = wev.findViewById(R.id.txt);
-        r= name
-                + "  " + t.getText().toString()
-                + " x " + ht.getText().toString()
-                + " x " +wet.getText().toString();
-}
-
-return r;
+        if (recyclers.containsKey("width")) {
+            width = getValue("width");
+        } else {
+            width = getValue("height");
+        }
 
 
-}
+        switch (name) {
+
+            case "HEA":
+            case "HEB":
+            case "HEM":
+                r += "  " + getValue("heb");
+
+                break;
+            case "IPE":
+
+                String ipes =getValue("ipes");
+                if (!ipes.equals("")) {
+                    r += "  " + ipes +" Standard ";
+                } else {
+                    r += "  " + getValue("iper") + " R  ";
+                }
+
+                break;
+
+            case "UAP":
+
+                String uaps =getValue("uaps");
+                if (!uaps.equals("")) {
+                    r += "  " + uaps +" Standard ";
+                } else {
+                    r += "  " + getValue("uapl") + " Light";
+                }
+
+                break;
+
+
+
+            case "UPN":
+            case "IPN":
+                r += "  " + getValue("height");
+                break;
+
+            case "Angles":
+            case "T-Profile":
+                r += "  " + width;
+                r += " x " + getValue("height");
+                r += " x " + getValue("weight");
+
+                break;
+
+
+            default:
+
+                r += "  " + getValue("weight");
+                break;
+
+
+        }
+
+
+        return r;
+
+
+    }
 
     public void gototable(View view) {
         Intent i = new Intent(this, TableActivity.class);
@@ -94,6 +148,7 @@ return r;
         startActivity(i);
 
     }
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         for (String a : recyclers.keySet()) {
@@ -103,16 +158,17 @@ return r;
     }
 
 
-   protected  void updatecmText(int id ){
+    protected void updatecmText(int id) {
 
         TextView cm = findViewById(id);
         cm.setText(Html.fromHtml(getString(R.string.cm)));
 
 
-       cm.setPadding(0,10,0,0);
+        cm.setPadding(0, 10, 0, 0);
 
     }
-    protected  void updateNavigation(@Nullable BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener ,int act  ){
+
+    protected void updateNavigation(@Nullable BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener, int act) {
 
 
         BottomNavigationView navigation = findViewById(R.id.navigation);
@@ -122,9 +178,6 @@ return r;
 
 
     }
-
-
-
 
 
 }

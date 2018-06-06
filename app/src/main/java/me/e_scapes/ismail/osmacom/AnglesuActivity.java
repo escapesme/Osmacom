@@ -21,6 +21,7 @@ public class AnglesuActivity extends MyActivity {
         updatecmText(R.id.cm_txt);
         updateNavigation(mOnNavigationItemSelectedListener,  R.id.unequal);
 
+        name = "Angles";
 
 
         recyclers.clear();

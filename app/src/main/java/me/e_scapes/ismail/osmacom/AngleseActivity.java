@@ -21,7 +21,7 @@ public class AngleseActivity extends MyActivity {
         updateNavigation(mOnNavigationItemSelectedListener,R.id.equal);
 
 
-
+        name = "Angles";
         recyclers.clear();
         data.clear();
 
