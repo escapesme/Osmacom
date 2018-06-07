@@ -103,8 +103,7 @@ public class PriceActivity extends AppCompatActivity {
     Double weight = 0d;
 
     public void gotohome(View view) {
-        Intent i = new Intent(this, MainActivity.class);
-        startActivity(i);
+        finish();
     }
 
 

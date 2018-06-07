@@ -268,7 +268,7 @@
                 <LinearLayout
                     style="@style/recycler_parent"
                     android:layout_height="28dp"
-                    android:layout_marginRight="8dp"
+                    android:layout_marginRight="11dp"
                     android:gravity="center_vertical|center_horizontal|center"
                     android:orientation="horizontal">
 
@@ -340,7 +340,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="2dp"
                         android:layout_marginStart="2dp"
-                        android:text="R reinforces" />
+                        android:text="R reinforced" />
 
                 </LinearLayout>
             </LinearLayout>

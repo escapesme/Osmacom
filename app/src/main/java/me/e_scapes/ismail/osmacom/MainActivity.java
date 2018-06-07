@@ -36,13 +36,13 @@ public class MainActivity extends AppCompatActivity {
         intents.add(new Intent(this, IPEActivity.class));
         images.add(R.drawable.ipe_th);
 
-        titles.add("T-Profile");
-        intents.add(new Intent(this, TpeofileActivity.class));
-        images.add(R.drawable.t_th);
         titles.add("UAP/UPN");
         intents.add(new Intent(this, UAPActivity.class));
         images.add(R.drawable.uap_th);
 
+        titles.add("T-Profile");
+        intents.add(new Intent(this, TpeofileActivity.class));
+        images.add(R.drawable.t_th);
         titles.add("Bars");
         intents.add(new Intent(this, BarsActivity.class));
         images.add(R.drawable.bars_th);

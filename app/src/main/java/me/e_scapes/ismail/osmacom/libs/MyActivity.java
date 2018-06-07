@@ -98,7 +98,7 @@ public class MyActivity extends AppCompatActivity {
                 if (!ipes.equals("")) {
                     r += "  " + ipes +" Standard ";
                 } else {
-                    r += "  " + getValue("iper") + " R  ";
+                    r += "  " + getValue("iper") + " R reinforced";
                 }
 
                 break;
@@ -121,11 +121,13 @@ public class MyActivity extends AppCompatActivity {
                 r += "  " + getValue("height");
                 break;
 
-            case "Angles":
+
             case "T-Profile":
+            case "Angles":
                 r += "  " + width;
                 r += " x " + getValue("height");
-                r += " x " + getValue("weight");
+                r += " x " + getValue("thickness");
+
 
                 break;
 

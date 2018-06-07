@@ -18,7 +18,7 @@ public class UAPActivity extends MyActivity {
         setContentView(R.layout.activity_uap);
         name = "UAP";
 
-        updatecmText(R.id.cm_txt);
+     //   updatecmText(R.id.cm_txt);
         updatecmText(R.id.cm_txt2);
 
 
@@ -45,7 +45,7 @@ public class UAPActivity extends MyActivity {
                 "",
                 "",
                 "",
-                "", "",
+                "", "","","",
                 "","130",
                 "175",
                 "200",
@@ -63,7 +63,7 @@ public class UAPActivity extends MyActivity {
                 "220",
                 "250",
                 "270",
-                "300","","",
+                "300","","","","",
                 "",
                 "",
                 "",
