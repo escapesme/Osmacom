@@ -152,5 +152,10 @@
 
     </style>
 
+    <style name="tip">
+        <item name="android:textSize">10sp</item>
+
+        </style>
+
 
 </resources>

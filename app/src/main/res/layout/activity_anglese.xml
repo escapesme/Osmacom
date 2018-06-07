@@ -88,11 +88,8 @@
     <android.support.constraint.ConstraintLayout
         android:id="@+id/data_preant"
         style="@style/data_preant"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btns_panel"
-        app:layout_constraintVertical_bias="0.0">
+
+        >
 
         <ImageView
             android:id="@+id/imageData"
@@ -108,6 +105,18 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.01999998"
             app:srcCompat="@drawable/angles_data_e" />
+
+        <TextView
+            style="@style/tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dimensions in millimeters"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.829"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.156" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/my_recycler_height"
