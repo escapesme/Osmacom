@@ -41,6 +41,13 @@ public class MyActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+    }
+
+
     public void gotohome(View view) {
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);

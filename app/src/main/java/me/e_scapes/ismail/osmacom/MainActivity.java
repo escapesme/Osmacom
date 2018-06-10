@@ -55,6 +55,10 @@ public class MainActivity extends AppCompatActivity {
         list_data.setAdapter(new items_list_adapte(this,  titles, images, intents));
 
     }
+    @Override
+    public void onBackPressed() {
+        finishAffinity();
+    }
 
     public void gotoabout(View view) {
         startActivity(new Intent(this, AboutActivity.class));

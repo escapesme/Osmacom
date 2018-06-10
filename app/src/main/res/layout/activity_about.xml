@@ -76,7 +76,7 @@
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="wrap_content"
-            android:layout_height="50"
+            android:layout_height="50dp"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -141,6 +141,7 @@
             android:layout_marginTop="8dp"
             android:text="info@osmacom.com.eg"
             android:textColor="@color/colorPrimary"
+            android:onClick="openemail"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
