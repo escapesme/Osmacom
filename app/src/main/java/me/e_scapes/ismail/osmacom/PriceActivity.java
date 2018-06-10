@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class PriceActivity extends AppCompatActivity {
     EditText wlength, clength, cprice;
-    TextView cresults, wresults,title;
+    TextView cresults, wresults, title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,7 +116,7 @@ public class PriceActivity extends AppCompatActivity {
                     ) {
 
                 Double a = Double.parseDouble(clength.getText().toString()) * Double.parseDouble(cprice.getText().toString()) * weight;
-                cresults.setText(a + " kg");
+                cresults.setText("$ " + a);
 
 
             }

@@ -8,18 +8,6 @@
         android:layoutDirection="ltr"
         tools:context=".AboutActivity">
 
-        <android.support.design.widget.BottomNavigationView
-            android:id="@+id/navigation"
-
-            style="@style/nav_style"
-
-
-            app:layout_constraintBottom_toBottomOf="parent"
-
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:menu="@menu/sheets" />
-
         <ImageView
             android:id="@+id/background"
             style="@style/background"
@@ -32,20 +20,22 @@
             app:srcCompat="@drawable/grey_technology_background" />
 
 
-        <LinearLayout
+
+
+    <LinearLayout
 
             android:id="@+id/btns_panel"
             style="@style/btns_panel"
 
 
             android:gravity="center_vertical|center_horizontal|center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
-            <ImageButton
+        <ImageButton
                 style="@style/back_btn_style"
                 android:layout_marginEnd="5dp"
                 android:onClick="gotohome"
@@ -76,24 +66,56 @@
     <android.support.constraint.ConstraintLayout
         android:id="@+id/data_preant"
         style="@style/data_preant"
-        android:padding="40dp"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btns_panel"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.53999996">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="50"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/full_logo" />
 
         <TextView
             android:id="@+id/textView17"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="20 Haroun Street , \nDokki , Giza , Egypt"
+            android:layout_marginStart="8dp"
+            android:onClick="openaddress_2"
+            android:text="Plot 6283 - 6th Industrial \n Area - Sadat City , Egypt
+"
             android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.42"
+            app:layout_constraintStart_toEndOf="@+id/textView20"
+            app:layout_constraintTop_toTopOf="@+id/textView20"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="203dp"
+            android:layout_marginTop="8dp"
+            android:onClick="openaddress_1"
+            android:text="20 Haroun Street , \nDokki , Giza , Egypt"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.084"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView14"
+            app:layout_constraintTop_toBottomOf="@+id/textView22"
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
@@ -101,12 +123,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:onClick="makeCall_2"
             android:text="Tel: +202 3748 7471"
             android:textColor="@color/colorPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView10"
+
+
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
@@ -114,6 +139,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:text="info@osmacom.com.eg"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView19"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:onClick="makeCall_3"
             android:text="Fax: +202 3761 3128"
             android:textColor="@color/colorPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -126,7 +165,35 @@
             android:id="@+id/textView14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/acme"
+            android:text="Factory"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.317"
+            app:layout_constraintStart_toEndOf="@+id/textView22"
+            app:layout_constraintTop_toTopOf="@+id/textView22"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/acme"
+            android:text="Head Office"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.081"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView21"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:fontFamily="@font/acme"
             android:text="Address : "
             android:textStyle="bold"
@@ -139,8 +206,9 @@
         <TextView
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="18dp"
             android:layout_marginTop="8dp"
+            android:onClick="openosmacom"
             android:text="www.osmacom.com.eg"
             android:textColor="@color/colorPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -153,7 +221,7 @@
             android:id="@+id/textView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:fontFamily="@font/acme"
             android:text="Contact us:"
             android:textStyle="bold"
@@ -167,7 +235,7 @@
             android:id="@+id/textView18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:fontFamily="@font/acme"
             android:text="Visit our website: "
             android:textStyle="bold"
@@ -181,11 +249,14 @@
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
             android:text="This app is brought to you by Osmacom. Leaders in Steel Construction and Fabrication.  "
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3"
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
@@ -193,6 +264,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:onClick="makeCall_1"
             android:text="Mob: +2010 0000 5366"
             android:textColor="@color/colorPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -200,6 +272,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView12"
             app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:onClick="openescpes"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView14"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/e_scapes_icon" />
     </android.support.constraint.ConstraintLayout>
 
 

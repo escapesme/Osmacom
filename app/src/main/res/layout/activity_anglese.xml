@@ -98,7 +98,6 @@
             android:layout_height="match_parent"
 
 
-            android:paddingBottom="150dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -126,21 +125,21 @@
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintHorizontal_bias="0.126"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.381" />
+            app:layout_constraintVertical_bias="0.501" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/my_recycler_thickness"
             style="@style/recycler"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.891"
+            app:layout_constraintHorizontal_bias="0.88"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
 
-            app:layout_constraintVertical_bias="0.553" />
+            app:layout_constraintVertical_bias="0.659" />
 
         <LinearLayout
             style="@style/recycler_parent"
@@ -149,10 +148,10 @@
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.623"
+            app:layout_constraintHorizontal_bias="0.638"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.385">
+            app:layout_constraintVertical_bias="0.536">
 
             <LinearLayout
                 style="@style/recycler_parent"
