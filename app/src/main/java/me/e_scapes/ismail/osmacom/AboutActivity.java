@@ -2,10 +2,15 @@ package me.e_scapes.ismail.osmacom;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -36,16 +41,61 @@ public class AboutActivity extends AppCompatActivity {
     }
 
 
-    void makecall(String number) {
+    void checkCallPermission() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE)
+                != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale((Activity) this,
+                    Manifest.permission.CALL_PHONE)) {
+                /**
+                 *
+                 */
+                new AlertDialog.Builder(this)
+                        .setTitle("Permission Required")
+                        .setMessage("This permission was denied earlier by you. This permission is required to call from app .So, in order to use this feature please allow this permission by clicking ok.")
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                                ActivityCompat.requestPermissions( AboutActivity.this,
+                                        new String[]{Manifest.permission.CALL_PHONE},
+                                        2);
+                            }
+                        })
+                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
 
-        Intent callIntent = new Intent(Intent.ACTION_CALL);
-        callIntent.setData(Uri.parse("tel:"+number));
-
-        if (ActivityCompat.checkSelfPermission(this,Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-            return;
+            } else {
+                ActivityCompat.requestPermissions((Activity) AboutActivity.this,
+                        new String[]{Manifest.permission.CALL_PHONE}, 2);
+            }
+        } else {
+            Intent callIntent = new Intent(Intent.ACTION_CALL);
+            callIntent.setData(Uri.parse("tel:" + phone_no));
+           startActivity(callIntent);
         }
-        startActivity(callIntent);
+    }
 
+    String phone_no="";
+
+    void makecall(String phone_number) {
+
+        if (phone_number != null && !phone_number.equals("")) {
+
+            phone_no = phone_number;
+
+            if (Build.VERSION.SDK_INT >= 23) {
+                checkCallPermission();
+            } else {
+                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                callIntent.setData(Uri.parse("tel:" + phone_no));
+
+             startActivity(callIntent);
+            }
+        }
 
     }
 
@@ -83,8 +133,8 @@ public class AboutActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("plain/text");
         intent.putExtra(Intent.EXTRA_EMAIL, new String[] { "info@osmacom.com.eg" });
-        intent.putExtra(Intent.EXTRA_SUBJECT, "subject");
-        intent.putExtra(Intent.EXTRA_TEXT, "mail body");
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Inquiry from Osmacom App");
+        intent.putExtra(Intent.EXTRA_TEXT, "");
         startActivity(Intent.createChooser(intent, ""));
     }
 }

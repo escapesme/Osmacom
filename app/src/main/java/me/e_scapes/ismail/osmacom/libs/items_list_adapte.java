@@ -27,7 +27,7 @@ public class items_list_adapte extends ArrayAdapter<String> {
     List<Intent> intents = new ArrayList<>();
 
     public items_list_adapte(Context context
-            , List< String> objects
+            , List<String> objects
             , List<Integer> images
             , List<Intent> intents
     ) {
@@ -55,6 +55,13 @@ public class items_list_adapte extends ArrayAdapter<String> {
         try {
             t.setText(title);
             image.setImageDrawable(this.context.getDrawable(img));
+            image.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    context.startActivity(i);
+
+                }
+            });
             t.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
