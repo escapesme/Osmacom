@@ -27,29 +27,29 @@ public class MainActivity extends AppCompatActivity {
 
         titles.add("Angles");
         intents.add(new Intent(this, AngleseActivity.class));
-        images.add(R.drawable.angles_th);
+        images.add(R.drawable.angles);
         titles.add("HEA/HEB/HEM HEC");
         intents.add(new Intent(this, HEAActivity.class));
-        images.add(R.drawable.hea_th);
+        images.add(R.drawable.hea);
 
         titles.add("IPE/IPN");
         intents.add(new Intent(this, IPEActivity.class));
-        images.add(R.drawable.ipe_th);
+        images.add(R.drawable.ipe_ipn);
 
         titles.add("UPN/UAP");
         intents.add(new Intent(this, UPNActivity.class));
-        images.add(R.drawable.uap_th);
+        images.add(R.drawable.upn_uap);
 
         titles.add("T-Profile");
         intents.add(new Intent(this, TpeofileActivity.class));
-        images.add(R.drawable.t_th);
+        images.add(R.drawable.t_profile);
         titles.add("Bars");
         intents.add(new Intent(this, BarsActivity.class));
-        images.add(R.drawable.bars_th);
+        images.add(R.drawable.bars);
 
         titles.add("Sheets/Flats");
         intents.add(new Intent(this, SheetsActivity.class));
-        images.add(R.drawable.sheets_th);
+        images.add(R.drawable.sheets_flat);
 
 
         list_data.setAdapter(new items_list_adapte(this,  titles, images, intents));
